@@ -78,8 +78,8 @@ along with this program. If not, see <http://www.gnu.org/licenses/>
 
 //OSD Hardware 
 //#define ArduCAM328
-#define MinimOSD
-//#define MicroOSD
+//#define MinimOSD
+#define MicroOSD
 
 //#define TELEMETRY_SPEED  57600  // Serial speed for key map update
 #define TELEMETRY_SPEED  38400  // Serial speed for key map update
@@ -95,7 +95,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>
 // Uncomment the define for RESISTIVE_KEY_PORT and set it to the analog port number
 // to read keystrokes from a keyboard where each key puts a different resistance across the 
 // two wires when pressed rather than the standard method that uses two diodes
-// #define RESISTIVE_KEY_PORT 2
+#define RESISTIVE_KEY_PORT 2
 
 #ifdef MicroOSD
   #define rssiPin A3   // Depands on patch of microOSD
@@ -106,9 +106,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>
   #define rx5808_SEL 5 // Depands on patch of minimOSD
 #endif
 
-//#define POWER_SENSE A0 // difficult to solder
-#define POWER_SENSE A2 // easier to solder
-#define POWER_SCALE 15.5 // divider 1.5K 22K, tweak to match correct voltage
+#define POWER_SENSE A0 // difficult to solder
+//#define POWER_SENSE A2 // easier to solder
+#define POWER_SCALE 16.6 // divider 1.5K 22K, tweak to match correct voltage
 #define POWER_UPDATE_RATE 20 // how ofter power is updated (loops)
 
 #define spiDataPin 11
